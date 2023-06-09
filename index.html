@@ -39,17 +39,17 @@
 </head>
 <body>
   <div class="container">
-    <h1>Tıkla ve Kopyala</h1>
+    <h1>Boş Karakteri Tıkla ve Kopyala</h1>
     <button class="kopyala-buton" onclick="kopyala()">Panoya Yazıyı Kopyala</button>
   </div>
 
   <script>
     function kopyala() {
-      var metin = "Merhaba, dünya!"; // Kopyalanacak metin
+      let metin = "ㅤ"; // Kopyalanacak metin
 
       navigator.clipboard.writeText(metin)
         .then(function() {
-          alert("Metin panoya kopyalandı: " + metin);
+          alert("Metin başarıyla panoya kopyalandı);
         })
         .catch(function(err) {
           console.error("Metin kopyalanırken bir hata oluştu: ", err);
