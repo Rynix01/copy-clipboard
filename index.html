@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pano Yazısı Kopyalama</title>
+  <style>
+    body {
+      background-color: #2b2d42;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .kopyala-buton {
+      padding: 10px 20px;
+      background-color: #694fad;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+    
+    .kopyala-buton:hover {
+      background-color: #512b80;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tıkla ve Kopyala</h1>
+    <button class="kopyala-buton" onclick="kopyala()">Panoya Yazıyı Kopyala</button>
+  </div>
+
+  <script>
+    function kopyala() {
+      var metin = "Merhaba, dünya!"; // Kopyalanacak metin
+
+      navigator.clipboard.writeText(metin)
+        .then(function() {
+          alert("Metin panoya kopyalandı: " + metin);
+        })
+        .catch(function(err) {
+          console.error("Metin kopyalanırken bir hata oluştu: ", err);
+        });
+    }
+  </script>
+</body>
+</html>
