@@ -39,14 +39,13 @@
 </head>
 <body>
   <div class="container">
-    <h1>Boş Karakteri Tıkla ve Kopyala</h1>
+    <h1 id="kopyalanacakMetin">Boş Karakteri Tıkla ve Kopyala</h1>
     <button class="kopyala-buton" onclick="kopyala()">Panoya Yazıyı Kopyala</button>
   </div>
 
   <script>
     function kopyala() {
-        let metin = \u2003;
-
+      let metin = document.getElementById("kopyalanacakMetin").innerText;
 
       navigator.clipboard.writeText(metin)
         .then(function() {
