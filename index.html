@@ -36,13 +36,6 @@
       background-color: #512b80;
     }
   </style>
-</head>
-<body>
-  <div class="container">
-    <h1 id="kopyalanacakMetin">Boş Karakteri Tıkla ve Kopyala</h1>
-    <button class="kopyala-buton" onclick="kopyala()">Panoya Yazıyı Kopyala</button>
-  </div>
-
   <script>
     function kopyala() {
       let metin = document.getElementById("kopyalanacakMetin").innerText;
@@ -56,5 +49,11 @@
         });
     }
   </script>
+</head>
+<body>
+  <div class="container">
+    <h1 id="kopyalanacakMetin">Boş Karakteri Tıkla ve Kopyala</h1>
+    <button class="kopyala-buton" onclick="kopyala()">Panoya Yazıyı Kopyala</button>
+  </div>
 </body>
 </html>
